@@ -14,7 +14,7 @@ public class EmployeeService {
 	@Autowired
 	EmployeeDao dao;
 	
-	public ResponseEntity<ResponseStructure<Employee>> saveEmp(Employee e){
+	public ResponseEntity<ResponseStructure<Employee>> savemp(Employee e){
 		ResponseStructure<Employee> rs = new ResponseStructure<Employee>();
 		rs.setStatuscode(HttpStatus.CREATED.value());
 		rs.setData(dao.saveEmp(e));
