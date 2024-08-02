@@ -2,6 +2,7 @@ package com.jsp.employee_management.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,7 +14,7 @@ import com.jsp.employee_management.util.ResponseStructure;
 public class EmployeeController {
 	@Autowired
 	EmployeeService service;
-	
+	@PostMapping("/save")
 	public ResponseEntity<ResponseStructure<Employee>> emp(@RequestBody Employee e){
 		return service.saveEmp(e);
 		
